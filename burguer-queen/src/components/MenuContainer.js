@@ -5,7 +5,7 @@ export default function MenuContainer () {
 
 // eslint-disable-next-line no-unused-vars
 const [orden, setOrden] = useState([]);
-const lunchMenu = {
+/*const lunchMenu = {
   id: id,
   dish: dish,
   price: price,
@@ -13,10 +13,9 @@ const lunchMenu = {
   type1: type1,
   type2: type2,
   type3: type3,
+}*/
 
-}
-
-const createMenu = () => {
+const lunchMenu = () => {
     store.collection('lunch').add(lunchMenu);
 }
 
@@ -112,7 +111,7 @@ const addToOrder = async (item) => {
         i.orden = true
     }
   })
-  await store.collection('lunch').doc(`${item.id}`).set(item, {merge: true})
+  await store.collection('lunch').doc(`${item.id}`).get();
 }
 
 return (
