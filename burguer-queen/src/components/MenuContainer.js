@@ -20,8 +20,8 @@ const lunchMenu = () => {
 }
 
 useEffect(() => {
-  store.collection('lunch').onSnapshot((querySnapshot) => {
-    let arr = [];
+  const prevProducts = store.collection('lunch').onSnapshot((querySnapshot) => {
+    let changes = snapshot.docChanges();
       querySnapshot.forEach((doc) => {
         arr.push(doc.data());
           // eslint-disable-next-line array-callback-return

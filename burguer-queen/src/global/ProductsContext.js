@@ -4,6 +4,23 @@ import {store} from '../config/firebase';
 
 export const ProductsContext = createContext ();
 
+/*function ProductsContextProvider () {
+
+const [order, setOrder] = useState([]);
+
+const getMenu = () => {
+  store.collection('Products').onSnapshot(snapshot => {
+    const changes = ['productos'];
+    querySnapshot.forEach((change) => {
+    changes.push({...change.data(), id: change.id})
+  })
+  setOrder(change);
+});
+};
+ useEffect(() => {
+getMenu();
+ }, []);*/
+
 export class ProductsContextProvider extends React.Component {
 
   state = {
@@ -26,13 +43,13 @@ export class ProductsContextProvider extends React.Component {
       })
     })
   }
-
   render(){
-  return (
-    <ProductsContext.Provider value={{products: [...this.state.products]}}>
-        {this.props.children}
-    </ProductsContext.Provider>
-  )
+    return (
+      <ProductsContext.Provider value={{products: [...this.state.products]}}>
+          {this.props.children}
+      </ProductsContext.Provider>
+    )
   }
 }
+
  export default ProductsContextProvider
