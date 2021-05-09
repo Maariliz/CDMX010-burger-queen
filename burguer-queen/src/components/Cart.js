@@ -21,7 +21,7 @@ const Cart = () => {
 return (
 
         <div className="cartContainer">
-            {shoppingCart.length !== 0 && <h1>Orden</h1>}
+            {shoppingCart.length !== 0 && <h2>Orden</h2>}
             {
             shoppingCart.leght === 0 &&
                 toast.warning(' No olvides agregar alimentos a la orden',{
@@ -38,12 +38,14 @@ return (
                 <div className="cartCard" key={cart.ProductID}>
                     <div className="cartName"> {cart.ProductName }</div>
                     <div className="cardPriceOriginal"> $ {cart.ProductPrice}.00 </div>
-                    <div className="inc" onClick={() => dispatch ({ type: 'INC', id: cart.ProductID, cart})}>
-                        +
-                    </div>
-                    <div className="quantity">{cart.qty}</div>
-                    <div className="dec" onClick={() => dispatch({ type: 'DEC', id: cart.ProductID, cart})}>
-                    -
+                      <div className="incAndDec">
+                        <div className="inc" onClick={() => dispatch ({ type: 'INC', id: cart.ProductID, cart})}>
+                            +
+                        </div>
+                        <div className="quantity">{cart.qty}</div>
+                        <div className="dec" onClick={() => dispatch({ type: 'DEC', id: cart.ProductID, cart})}>
+                        -
+                        </div>
                     </div>
                     <div className="cartPrice"> $ {cart.TotalProductPrice}.00  </div>
                     <button className="deleteBtn" onClick={() => dispatch({ type: 'DELETE', id: cart.ProductID, cart})}>
@@ -55,18 +57,18 @@ return (
         {/*{shoppingCart.lenght = 0 &&*/}
         <div className='cartSummary'>
           <div className="cartSummaryHeading">
-            Resumen
+            Resumen de la Orden
           </div>
           <div className="cartSummaryPrice">
-              <span>Precio Total</span>
-              <span>{totalPrice}</span>
+              <span>Precio Total:  </span>
+              <span>$ {totalPrice}.00</span>
           </div>
           <div className="cartSummaryQty">
-            <span>Cantidad Total</span>
+            <span>Cantidad Total: </span>
             <span>{totalQty}</span>
           </div>
-          <button>
-            Enviar Cocina
+          <button className="sendKitchen">
+            Enviar a Cocina
           </button>
         </div>
     </div>

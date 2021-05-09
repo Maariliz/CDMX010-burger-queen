@@ -15,11 +15,13 @@ export const Products = () => {
       <div className="cardContainer">
         {products.map(product => (
           <div className="productCard" key={product.ProductID}>
+            <div className="infoProduct">
             <div className= "productName">
               {product.ProductName}
             </div>
             <div className="productPrice">
               $ {product.ProductPrice}.00
+            </div>
             </div>
             <div className="btnAddCart">
               <button className="btnAdd" onClick={() => dispatch({type:'ADD_TO_CART',id:product.ProductID, product })}>Agregar</button>

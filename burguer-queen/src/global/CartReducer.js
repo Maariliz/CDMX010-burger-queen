@@ -31,7 +31,7 @@ const CartReducer = (state, action) => {
       }
     else{
       product = action.product;
-      product['qty'] = 1;
+      product['qty'] = Number (1);
       product['TotalProductPrice'] = product.ProductPrice * product.qty;
       updatedQty = totalQty + 1;
       updatedPrice = totalPrice + product.ProductPrice;
@@ -44,7 +44,7 @@ const CartReducer = (state, action) => {
 
     case 'INC':
         product = action.cart;
-        product.qty =++ product.qty;
+        product.qty = ++product.qty;
         product.TotalProductPrice = product.qty * product.ProductPrice;
         updatedQty = totalQty + 1;
         updatedPrice = totalPrice + product.ProductPrice;
@@ -69,29 +69,29 @@ case 'DEC':
       shoppingCart: [...shoppingCart], totalPrice: updatedPrice, totalQty: updatedQty
     }
   }
-else{
-return state;
-}
-// eslint-disable-next-line no-unreachable
-break;
+  else{
+  return state;
+  }
+  // eslint-disable-next-line no-unreachable
+  break;
 
-case 'DELETE':
-const filtered = shoppingCart.filter(product => product.ProductID !== action.id);
-product = action.cart;
-updatedQty = totalQty - product.qty;
-updatedPrice = totalPrice - product.qty * product.ProductPrice;
-return {
-  shoppingCart: [...filtered], totalPrice: updatedPrice, totalQty: updatedQty
-}
-// eslint-disable-next-line no-unreachable
-break;
+  case 'DELETE':
+  const filtered = shoppingCart.filter(product => product.ProductID !== action.id);
+  product = action.cart;
+  updatedQty = totalQty - product.qty;
+  updatedPrice = totalPrice - product.qty * product.ProductPrice;
+  return {
+    shoppingCart: [...filtered], totalPrice: updatedPrice, totalQty: updatedQty
+  }
+  // eslint-disable-next-line no-unreachable
+  break;
 
-case 'EMPTY':
-    return {
-      shoppingCart: [], totalPrice: 0, totalQty: 0
-    }
-default:
-    return state;
+  case 'EMPTY':
+      return {
+        shoppingCart: [], totalPrice: 0, totalQty: 0
+      }
+  default:
+      return state;
 
   }
 }
