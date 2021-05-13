@@ -1,5 +1,5 @@
 import React, {createContext} from 'react';
-import {store} from '../config/firebase';
+import {store} from '../Config/firebase';
 
 
 export const ProductsContext = createContext ();

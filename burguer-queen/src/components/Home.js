@@ -3,7 +3,7 @@ import React from 'react';
 //mport { auth } from '../config/firebase';
 import Products from './Products';
 import Cart from './Cart';
-import Navbar from './Navbar';
+//import Navbar from './Navbar';
 //Cuando realicemos autenticacion senialar {user} como prop
 export default function Home ()  {
 
@@ -19,10 +19,13 @@ export default function Home ()  {
   })*/
 
     return (
+      <div className="backgroundContainer">
+ {/* /*<img className="logoBurgerQueen" src='/img/wall.jpg' alt="burgerQueen"></img> */}
         <div className='homeContainer'>
-            <Navbar /> {/* Al realizar autenticacion colocar en navbar user = {user} */}
+            {/* <Navbar /> Al realizar autenticacion colocar en navbar user = {user} */}
             <Products/>
             <Cart />
         </div>
+      </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { ProductsContext } from '../global/ProductsContext';
-import { CartContext } from '../global/CartContext';
+import { ProductsContext } from '../Global/ProductsContext';
+import { CartContext } from '../Global/CartContext';
 
 export const Products = () => {
 

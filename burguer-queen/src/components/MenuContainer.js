@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {store} from '../config/firebase'
+import {store} from './Config/firebase'
 
-export default function MenuContainer () {
+ function MenuContainer () {
 
 // eslint-disable-next-line no-unused-vars
 const [orden, setOrden] = useState([]);

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { store } from '../config/firebase';
+import { store } from '../Config/firebase';
 
 // import { store } from '../Config/firebase'
 

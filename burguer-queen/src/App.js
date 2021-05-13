@@ -2,11 +2,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 //import { ProductsContextProvider } from './global/ProductsContext'
-import AddProducts from './components/AddProducts'
+import AddProducts from './Components/AddProducts'
 import './App.css';
-import ProductsContextProvider from './global/ProductsContext';
-import CartContextProvider from './global/CartContext';
-import Home from './components/Home';
+import ProductsContextProvider from './Global/ProductsContext';
+import CartContextProvider from './Global/CartContext';
+import Home from './Components/Home';
+//import Kitchen from './Components/Kitchen';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Switch>
           <Route path="/addProducts" component={AddProducts}/>
           <Route path="/home" component={Home}/>
+          {/*<Route path="/kitchen" component={Kitchen}/>*/}
         </Switch>
       </Router>
     </CartContextProvider>

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { CartContext } from '../global/CartContext';
+import { CartContext } from '../Global/CartContext';
 //import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,8 +19,11 @@ const Cart = () => {
   //const history = useHistory();
 
 return (
-
-        <div className="cartContainer">
+  <div className="cartContainer">
+      <div className="logoContainer">
+        <img className="logoBurgerQueen" src='/img/bqueen.png' alt="burgerQueen"></img>
+      </div>
+       <div className="orderContainer">
             {shoppingCart.length !== 0 && <h2>Orden</h2>}
             {
             shoppingCart.leght === 0 &&
@@ -37,20 +40,14 @@ return (
             {shoppingCart && shoppingCart.map(cart => (
                 <div className="cartCard" key={cart.ProductID}>
                     <div className="cartName"> {cart.ProductName }</div>
-                    <div className="cardPriceOriginal"> $ {cart.ProductPrice}.00 </div>
+                    <div className="cardPriceOriginal">Precio Unitario:$ {cart.ProductPrice}.00 </div>
+                    <div className="cartPrice"> Subtotal ${cart.TotalProductPrice}.00  </div>
                       <div className="incAndDec">
-                        <div className="inc" onClick={() => dispatch ({ type: 'INC', id: cart.ProductID, cart})}>
-                            +
-                        </div>
+                        <img className="inc" src='/img/add.svg' alt="" onClick={() => dispatch ({ type: 'INC', id: cart.ProductID, cart})}></img>
                         <div className="quantity">{cart.qty}</div>
-                        <div className="dec" onClick={() => dispatch({ type: 'DEC', id: cart.ProductID, cart})}>
-                        -
-                        </div>
+                        <img className="dec" src='/img/minus.svg' alt="" onClick={() => dispatch({ type: 'DEC', id: cart.ProductID, cart})}></img>
                     </div>
-                    <div className="cartPrice"> $ {cart.TotalProductPrice}.00  </div>
-                    <button className="deleteBtn" onClick={() => dispatch({ type: 'DELETE', id: cart.ProductID, cart})}>
-                      x
-                    </button>
+                    <img className="deleteBtn" src='/img/trash.svg' alt="" onClick={() => dispatch({ type: 'DELETE', id: cart.ProductID, cart})}></img>
                 </div>
             ))
             }
@@ -72,9 +69,10 @@ return (
           </button>
         </div>
     </div>
-
+</div>
 
   )
         }
+
 
 export default Cart;
