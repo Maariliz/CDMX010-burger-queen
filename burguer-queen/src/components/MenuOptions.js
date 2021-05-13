@@ -10,7 +10,7 @@ function Welcome (){
          <img className="welcomeLightbulb" src='/assets/idea.svg' alt="happyNotes"></img>
         </div>
         <div className="aboutHp">
-         <p> Todas tus ideas guardadas en un mismo lugar </p>
+         <p> bq</p>
         </div>
         <div className="buttonsWelcome">
           <Link to= "/menu1">
