@@ -1,39 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+}
 
-.App {
+.homeContainer{
+  background-image:url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  position: fixed;
+  /* display: flex;
+  flex-direction: column wrap; */
+}
+ /*contenedor de las tarjetas rosas*/
+.productsContainer {
+  /*background-color: blue;*/
+  margin-top: 20px;
+  height: 500px;
+  width: 500px;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+.productsContainer h1{
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+ /*tarjetas rosas */
+.cardContainer{
+  /*background-color:chartreuse;*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 410px;
+  width: 500px;
+  margin: 15px;
+  margin-right: 100px;
+  margin-left: 0px;
+  margin-bottom: 150px;
+}
+
+.productCard{
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+  background-image: none;
+  background-color: #F72585;
+  opacity: 0.7;
+  border-color: #F72585;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  height: 130px;
+  width: 100px;
+  margin-top: 15px;
+  margin-left: 0px;
+  margin-right: 20px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 12px;
+  color:  #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.infoProduct{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.productName{
+margin-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.productPrice{
+  margin-top: 10px;
+}
+
+.btnAddCart{
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.btnAdd{
+  background-color: #847FDC;
+  border-color: #3F37C9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  font-size: 12px;
+  height: 24px;
+  width: 80px;
+}
+ /*totales*/
+.cartContainer h2{
+color: #FFFFFF;
+}
+
+.cartContainer{
+  background-color: #000000;
+  opacity: 0.6;
+  margin-right: 55px;
+  margin-top: 80px;
+  height: 600px;
+  width: 200px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
+  color:  #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cartSummary{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 18px;
+  color:  #FFFFFF;
+}
+
+.cartSummaryHeading{
+  margin-bottom: 10px;
+}
+.cartSummaryQty{
+  margin-bottom: 15px;
+}
+.sendKitchen{
+  background-color: #847FDC;
+  border-color: #3F37C9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  font-size: 16px;
+  height: 38px;
+  width: 140px;
+}
+
+.cartCard{
+  background-color: blueviolet;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.cartName{
+  background-color: chartreuse;
+  height: 24px;
+}
+
+.cartPriceOriginal{
+  background-color: chartreuse;
+  height: 24px;
+}
+
+.incAndDec{
+  display: flex;
+  flex-direction: row;
+}
+.navbarContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  width: 1024px;
+  height: 100px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
 }
+/*navBar*/
+.navbarContainer p{
+  display: flex;
+  flex-direction: row;
+  color: #FFFFFF;
+  font-size: 16px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.logoBurqerQueen{
+width:auto;
+height:90px ;
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
