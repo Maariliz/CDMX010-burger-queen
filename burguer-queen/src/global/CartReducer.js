@@ -18,20 +18,21 @@ const CartReducer = (state, action) => {
     case 'ADD_TO_CART':
       const check = shoppingCart.find(product => product.ProductID === action.id);
       if(check) {
-      toast.info('🦄 Item agregado!', {
+        toast.info('🦄 Item agregado!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
+        pauseOnHover: false,
+        draggable: false,
         progress: undefined,
         });
         return state;
       }
     else{
       product = action.product;
-      product['qty'] = Number (1);
+      console.log(product);
+      product.qty= 1;
       product['TotalProductPrice'] = product.ProductPrice * product.qty;
       updatedQty = totalQty + 1;
       updatedPrice = totalPrice + product.ProductPrice;
@@ -44,12 +45,14 @@ const CartReducer = (state, action) => {
 
     case 'INC':
         product = action.cart;
-        product.qty = ++product.qty;
+        console.log(action.cart)
+        product.qty++;
+        console.log(product.qty, product.qty++)
         product.TotalProductPrice = product.qty * product.ProductPrice;
         updatedQty = totalQty + 1;
         updatedPrice = totalPrice + product.ProductPrice;
-        index = shoppingCart.findIndex(cart => cart.ProductID === action.id);
-        shoppingCart[index] = product;
+        //index = shoppingCart.findIndex(cart => cart.ProductID === action.id);
+        //shoppingCart[index] = product;
         return {
           shoppingCart: [...shoppingCart], totalPrice: updatedPrice, totalQty: updatedQty
         }

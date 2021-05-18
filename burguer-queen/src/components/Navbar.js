@@ -1,13 +1,11 @@
-import React from 'react'
+//import React from 'react'
 
-export default function Navbar() {
-    return (
-        <div className="navbarContainer">
+/*export default function Navbar() {
+    //return (
+       {/*<div className="navbarContainer">
         <p>ADMIN</p>
-        <img className="logoBurqerQueen" src='/img/bqueen.png' alt="burgerQueen"></img>
+        <img className="logoBurgerQueen" src='/img/bqueen.png' alt="burgerQueen"></img>
+      </div>
+   )
+}*/
 
-
-        </div>
-
-    )
-}
