@@ -20,6 +20,7 @@ export default function Home ()  {
 
     return (
       <div className="backgroundContainer">
+        <div className="backgroundContainerHome"></div>
  {/* /*<img className="logoBurgerQueen" src='/img/wall.jpg' alt="burgerQueen"></img> */}
         <div className='homeContainer'>
             {/* <Navbar /> Al realizar autenticacion colocar en navbar user = {user} */}

@@ -3,7 +3,7 @@
 
   font-family: 'Roboto', sans-serif;
 }
-.backgroundContainer {
+.backgroundContainer{
   background-image:url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
   width: 80;
   height: 50%;
@@ -11,6 +11,7 @@
   position: relative;
   opacity: none;
 }
+
 .homeContainer{
   display: flex;
   flex-direction: column wrap;
@@ -200,5 +201,119 @@ display: flex;
   flex-direction: row;
   margin-top: 0px;
   height: 65px;
+}
+
+.menuMainContainer{
+display: flex;
+flex-direction: column;
+  background-image:url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  width: 80;
+  height: 50%;
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+
+}
+
+.logoMainContainer{
+  display: flex;
+  justify-content: flex-end;
+  height: 100px;
+  width: auto;
+  margin-right: 20px;
+  opacity: none;
+}
+
+.mainLogo{
+  height: 100px;
+  width: auto;
+}
+
+.optionsMenu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 40px;
+  opacity: none;
+}
+
+.breakfastMenu h3{
+  margin-top: 24px;
+  margin-bottom: 0px;
+  opacity: none;
+}
+
+.breakfastMenu p{
+  margin-top: 2px;
+  opacity: none;
+}
+
+.breakfastMenu{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 528px;
+  height: 160px;
+  background: linear-gradient(0deg, rgba(132, 127, 220, 0.96), rgba(132, 127, 220, 0.96)), #000000;
+  border: 3px solid #3F37C9;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(63, 55, 201, 0.25);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  color:  #FFFFFF;
+  margin-bottom: 65px;
+  opacity: none;
+}
+
+.dinnerMenu{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 528px;
+  height: 160px;
+  background: #C577F9;
+  border: 3px solid #7209B7;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px #7209B7;
+  border-radius: 8px;
+  margin-bottom: 65px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  color:  #FFFFFF;
+  text-align: center;
+  opacity: none;
+}
+
+.dinnerMenu h3{
+  margin-top: 26px;
+  margin-bottom: 0px;
+  opacity: none;
+}
+
+.dinnerMenu p{
+  margin-top: 2px;
+  opacity: none;
+}
+
+.addProductsOption{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 528px;
+  height: 160px;
+  background: #FB89BC;
+  border: 3px solid #F72585;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px #F72585;
+  border-radius: 8px;
+  margin-bottom: 65px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  color:  #FFFFFF;
+  opacity: none;
 }
 
